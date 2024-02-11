@@ -1,0 +1,81 @@
+
+  .wrapper_slader {
+    display: grid;
+    place-items: center;
+    margin-left: -25px;
+  }
+  
+  .carousel {
+    container-type: inline-size;
+    width: min(40rem, 100% - 4rem);
+
+  }
+  
+  
+  .carousel__inner {
+   
+    --number-of-items: 1;
+    --gap: 1rem;
+    --peek: 2rem;
+    --item-width: calc(
+      (100% - (var(--peek) * 2) - var(--gap)) / var(--number-of-items)
+    );
+
+    display: flex;
+    justify-content: start;
+    flex-wrap: no-wrap;
+    overflow-x: scroll;
+    gap: 3rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding: var(--peek);
+  
+  }
+  .carousel__slide1 {
+    background-image:url('pictures/slider/img1.svg') ;
+    flex: 0 0 var(--item-width);
+    min-height: 350px;
+    min-width: 600px;
+    scroll-snap-align: start;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .carousel__slide1 {
+    background-image:url('pictures/slider/img1.svg') ;
+    flex: 0 0 var(--item-width);
+    min-height: 350px;
+    scroll-snap-align: start;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .carousel__slide2 {
+    background-image:url('pictures/slider/img2.svg') ;
+    flex: 0 0 var(--item-width);
+    min-height: 350px;
+    scroll-snap-align: start;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .carousel__slide3 {
+    background-image:url('pictures/slider/img3.svg') ;
+    flex: 0 0 var(--item-width);
+    min-height: 350px;
+    scroll-snap-align: start;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .carousel__slide4 {
+    background-image:url('pictures/slider/img4.svg') ;
+    flex: 0 0 var(--item-width);
+    min-height: 350px;
+    scroll-snap-align: start;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+
+  @container (width > 600px) {
+    .carousel__inner {
+      --number-of-items: 2;
+    }
+  }
